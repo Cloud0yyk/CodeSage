@@ -1,4 +1,4 @@
-package com.cloud.codesageBackend.pojo.dto;
+package com.cloud.codesageBackend.pojo.vo;
 
 import lombok.Data;
 
@@ -6,6 +6,9 @@ import java.util.List;
 
 @Data
 public class DefUseInfo {
+    /**
+     * 函数名/类名/文件名
+     */
     private String methodName;
 
     /**

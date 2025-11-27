@@ -1,4 +1,4 @@
-package com.cloud.codesageBackend.pojo.dto;
+package com.cloud.codesageBackend.pojo.vo;
 
 import lombok.Data;
 
@@ -7,15 +7,23 @@ import java.util.Map;
 
 @Data
 public class AnalysisResult {
-    // overall metrics
+    /**
+     * overall metrics
+     */
     private Map<String, Integer> metrics; // e.g. LOC, total_cc, max_nesting
 
-    // per-method / per-node details
+    /**
+     * per-method / per-node details
+     */
     private List<MetricDetail> methodMetrics;
 
-    // bug findings
+    /**
+     * bug findings
+     */
     private List<BugFinding> findings;
 
-    // def-use info
+    /**
+     * def-use info
+     */
     private List<DefUseInfo> defUseInfos;
 }

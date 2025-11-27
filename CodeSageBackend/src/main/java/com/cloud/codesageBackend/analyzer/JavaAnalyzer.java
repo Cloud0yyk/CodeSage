@@ -1,15 +1,20 @@
 package com.cloud.codesageBackend.analyzer;
 
+import com.cloud.codesageBackend.pojo.vo.AnalysisResult;
+import com.cloud.codesageBackend.pojo.vo.BugFinding;
+import com.cloud.codesageBackend.pojo.vo.DefUseInfo;
+import com.cloud.codesageBackend.pojo.vo.MetricDetail;
 import com.github.javaparser.JavaParser;
+import com.github.javaparser.ParseResult;
 import com.github.javaparser.ParserConfiguration;
 import com.github.javaparser.Position;
+import com.github.javaparser.ast.ArrayCreationLevel;
 import com.github.javaparser.ast.CompilationUnit;
 import com.github.javaparser.ast.Node;
 import com.github.javaparser.ast.body.MethodDeclaration;
 import com.github.javaparser.ast.expr.*;
 import com.github.javaparser.ast.stmt.*;
 import com.github.javaparser.ast.visitor.VoidVisitorAdapter;
-import com.cloud.codesageBackend.pojo.dto.*;
 
 import org.springframework.stereotype.Component;
 
@@ -18,7 +23,6 @@ import java.util.*;
 
 @Component
 public class JavaAnalyzer {
-
     public AnalysisResult analyze(String code) {
         AnalysisResult result = new AnalysisResult();
         Map<String, Integer> metrics = new HashMap<>();
@@ -29,7 +33,7 @@ public class JavaAnalyzer {
         ParserConfiguration config = new ParserConfiguration();
         JavaParser parser = new JavaParser(config);
 
-        var parseResult = parser.parse(new StringReader(code));
+        ParseResult<CompilationUnit> parseResult = parser.parse(new StringReader(code));
         if (!parseResult.isSuccessful() || parseResult.getResult().isEmpty()) {
             // parse error -> return minimal info
             metrics.put("LOC", countLines(code));

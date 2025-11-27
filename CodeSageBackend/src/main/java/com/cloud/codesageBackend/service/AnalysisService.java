@@ -1,7 +1,7 @@
 package com.cloud.codesageBackend.service;
 
 import com.cloud.codesageBackend.pojo.dto.AnalysisRequest;
-import com.cloud.codesageBackend.pojo.dto.AnalysisResult;
+import com.cloud.codesageBackend.pojo.vo.AnalysisResult;
 import com.cloud.codesageBackend.analyzer.JavaAnalyzer;
 import org.springframework.stereotype.Service;
 

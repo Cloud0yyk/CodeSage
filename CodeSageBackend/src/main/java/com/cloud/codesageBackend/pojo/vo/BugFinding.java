@@ -1,4 +1,4 @@
-package com.cloud.codesageBackend.pojo.dto;
+package com.cloud.codesageBackend.pojo.vo;
 
 import lombok.Data;
 

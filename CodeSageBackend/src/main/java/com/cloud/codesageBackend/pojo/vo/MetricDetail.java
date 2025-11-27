@@ -1,16 +1,16 @@
-package com.cloud.codesageBackend.pojo.dto;
+package com.cloud.codesageBackend.pojo.vo;
 
 import lombok.Data;
 
 @Data
 public class MetricDetail {
     /**
-     *
+     * 函数名/类名/文件名
      */
     private String name;
 
     /**
-     *
+     * 代码行数
      */
     private int loc;
 

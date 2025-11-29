@@ -1,4 +1,4 @@
-package com.cloud.code_sage_analyzer.pojo.vo;
+package com.cloud.code_sage_model.analyzer.vo;
 
 import lombok.Data;
 

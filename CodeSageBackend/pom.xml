@@ -11,6 +11,7 @@
 
     <modules>
         <module>code-sage-common</module>
+        <module>code-sage-model</module>
         <module>code-sage-analyzer</module>
     </modules>
 

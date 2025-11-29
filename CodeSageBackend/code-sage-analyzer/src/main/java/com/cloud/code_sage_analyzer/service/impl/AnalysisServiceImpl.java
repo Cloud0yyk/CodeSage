@@ -1,8 +1,8 @@
 package com.cloud.code_sage_analyzer.service.impl;
 
 import com.cloud.code_sage_analyzer.analyzer.JavaAnalyzer;
-import com.cloud.code_sage_analyzer.pojo.dto.AnalysisRequest;
-import com.cloud.code_sage_analyzer.pojo.vo.AnalysisResult;
+import com.cloud.code_sage_model.analyzer.dto.AnalysisRequest;
+import com.cloud.code_sage_model.analyzer.vo.AnalysisResult;
 import com.cloud.code_sage_analyzer.service.AnalysisService;
 import org.springframework.stereotype.Service;
 

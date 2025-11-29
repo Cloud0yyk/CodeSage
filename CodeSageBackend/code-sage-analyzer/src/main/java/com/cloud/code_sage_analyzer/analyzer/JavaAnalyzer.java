@@ -1,9 +1,9 @@
 package com.cloud.code_sage_analyzer.analyzer;
 
-import com.cloud.code_sage_analyzer.pojo.vo.AnalysisResult;
-import com.cloud.code_sage_analyzer.pojo.vo.BugFinding;
-import com.cloud.code_sage_analyzer.pojo.vo.DefUseInfo;
-import com.cloud.code_sage_analyzer.pojo.vo.MetricDetail;
+import com.cloud.code_sage_model.analyzer.vo.AnalysisResult;
+import com.cloud.code_sage_model.analyzer.vo.BugFinding;
+import com.cloud.code_sage_model.analyzer.vo.DefUseInfo;
+import com.cloud.code_sage_model.analyzer.vo.MetricDetail;
 import com.github.javaparser.JavaParser;
 import com.github.javaparser.ParseResult;
 import com.github.javaparser.ParserConfiguration;

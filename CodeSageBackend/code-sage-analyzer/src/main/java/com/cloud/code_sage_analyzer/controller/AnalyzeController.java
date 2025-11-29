@@ -4,8 +4,8 @@ package com.cloud.code_sage_analyzer.controller;
 import com.cloud.cloud_sage_common.common.BaseResponse;
 import com.cloud.cloud_sage_common.common.ResultUtils;
 import com.cloud.code_sage_analyzer.service.AnalysisService;
-import com.cloud.code_sage_analyzer.pojo.dto.AnalysisRequest;
-import com.cloud.code_sage_analyzer.pojo.vo.AnalysisResult;
+import com.cloud.code_sage_model.analyzer.dto.AnalysisRequest;
+import com.cloud.code_sage_model.analyzer.vo.AnalysisResult;
 import org.springframework.web.bind.annotation.*;
 
 @RestController

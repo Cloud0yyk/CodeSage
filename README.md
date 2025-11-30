@@ -1,8 +1,12 @@
-# 🚀 CodeSage — 智能代码分析与自动修复 Agent  
-**Java / C++ | MCP | RAG | Static Analysis | LLM-Powered Code Intelligence**
+# 🚀 CodeSage — 智能代码分析与自动修复 Agent
 
-CodeSage 是一个为工程代码与编程题而生的智能代码分析 Agent。  
-它将 **静态分析 + RAG 检索 + MCP 工具链 + 大模型推理** 组合成统一系统，支持多语言代码的自动诊断、缺陷定位和自动修复，为在线判题系统（Online Judge）与 IDE 插件提供新一代智能能力。
+>CodeSage 是一个为工程代码与编程题而生的智能代码分析 Agent。  
+>它将 **静态分析 + RAG 检索 + MCP 工具链 + 大模型推理** 组合成统一系统，支持多语言代码的自动诊断、缺陷定位和自动修复，为在线判题系统（Online Judge）与 IDE 插件提供新一代智能能力。
+
+<p align="center">
+☕ Java &nbsp;|&nbsp; 🧵 C++ &nbsp;|&nbsp; 🔌 MCP &nbsp;|&nbsp; 📚 RAG &nbsp;|&nbsp; 🛡️ Static Analysis &nbsp;|&nbsp; 🤖 LLM Code Intelligence
+</p>
+
 
 ---
 

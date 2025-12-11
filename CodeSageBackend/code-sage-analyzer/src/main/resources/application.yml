@@ -2,3 +2,9 @@
 server:
   port: 8080
 
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/oj_db
+    username: yyk
+    password: 123456

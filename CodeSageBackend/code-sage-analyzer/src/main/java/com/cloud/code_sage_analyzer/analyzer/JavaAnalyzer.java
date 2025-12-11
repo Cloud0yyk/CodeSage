@@ -1,5 +1,7 @@
 package com.cloud.code_sage_analyzer.analyzer;
 
+import com.cloud.cloud_sage_common.common.ErrorCode;
+import com.cloud.cloud_sage_common.exception.BusinessException;
 import com.cloud.code_sage_model.analyzer.vo.AnalysisResult;
 import com.cloud.code_sage_model.analyzer.vo.BugFinding;
 import com.cloud.code_sage_model.analyzer.vo.DefUseInfo;
@@ -19,11 +21,20 @@ import com.github.javaparser.ast.visitor.VoidVisitorAdapter;
 import org.springframework.stereotype.Component;
 
 import java.io.StringReader;
+import java.nio.charset.StandardCharsets;
 import java.util.*;
 
 @Component
 public class JavaAnalyzer {
     public AnalysisResult analyze(String code) {
+        try {
+            byte[] decoded = Base64.getDecoder().decode(code);
+            code = new String(decoded, StandardCharsets.UTF_8);
+        }
+        catch (Exception e) {
+            throw new BusinessException(ErrorCode.SYSTEM_ERROR, "Failed to parse code: " + e.getMessage());
+        }
+
         AnalysisResult result = new AnalysisResult();
         Map<String, Integer> metrics = new HashMap<>();
         List<MetricDetail> methodMetrics = new ArrayList<>();
